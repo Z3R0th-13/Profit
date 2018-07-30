@@ -1,6 +1,14 @@
 #Script to find possibly useful documents. The purpose of this is simple and the implementation is even easier, it's primarily to save time. Results are not written to disk since they are just queried. Should be relatively easy to store the results in variables if needed.
 #Written by Z3R0th
 
+Write-Host "     __    ____     ____     ____     ______   ____   ______    __"
+Write-Host "   _/ /   / __ \   / __ \   / __ \   / ____/  /  _/  /_  __/  _/ /"
+Write-Host "  / __/  / /_/ /  / /_/ /  / / / /  / /_      / /     / /    / __/"
+Write-Host " (_  )  / ____/  / _, _/  / /_/ /  / __/    _/ /     / /    (_  ) "
+Write-Host "/  _/  /_/      /_/ |_|   \____/  /_/      /___/    /_/    /  _/  "
+Write-Host "/_/                                                        /_/    "
+Write-Host " "
+
 Write-Host "Checking filesystem for interesting files...this could take a while..."
 
 $Drives = [System.IO.DriveInfo]::GetDrives() | select-string ":" #Finds all drives on system
