@@ -1,4 +1,4 @@
-$Script to find possibly useful documents. The purpose of this is simple and the implementation is even easier, it's primarily to save time. Results are not written to disk since they are just queried. Should be relatively easy to store the results in variables if needed.
+#Script to find possibly useful documents. The purpose of this is simple and the implementation is even easier, it's primarily to save time. Results are not written to disk since they are just queried. Should be relatively easy to store the results in variables if needed.
 #Written by Z3R0th
 
 Write-Host "Checking filesystem for interesting files...this could take a while..."
