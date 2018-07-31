@@ -13,7 +13,7 @@ Write-Host "Checking filesystem for interesting files...this could take a while.
 
 function Invoke-Profit {
 
-  if ((Get-Host).Version.Major(3) -or (Get-Host).Version.Major(4) -or (Get-Host).Version.Major(5)) {
+  if ((Get-Host).Version.Major.Equals(3) -or (Get-Host).Version.Major.Equals(4) -or (Get-Host).Version.Major.Equals(5)) {
   
   $Drives = [System.IO.DriveInfo]::GetDrives() | select-string ":" #Finds all drives on system
 
