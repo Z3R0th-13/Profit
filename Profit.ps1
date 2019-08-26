@@ -29,6 +29,8 @@ function Invoke-Profit {
 
   GCI -Recurse -Path $Drives -Filter "*password*" -File -ErrorAction SilentlyContinue | where {($_.Extension -eq ".txt") -or ($_.Extension -eq ".csv") -or ($_.Extension -eq ".db") -or ($_.Extension -eq ".dbf") -or ($_.Extension -eq ".log") -or ($_.Extension -eq ".mdb") -or ($_.Extension -eq ".sav") -or ($_.Extension -eq ".sql") -or ($_.Extension -eq ".tar") -or ($_.Extension -eq ".xml") -or ($_.Extension -eq ".bak") -or ($_.Extension -eq ".pdf") -or ($_.Extension -eq ".tex") -or ($_.Extension -eq ".docx") -or ($_.Extension -eq ".doc") -or ($_.Extension -eq ".xls") -or ($_.Extension -eq ".xlsx")} #Will look for password files.
 
+  GCI -Recurse -Path $Drives -Filter "*credential*" -File -ErrorAction SilentlyContinue | where {($_.Extension -eq ".txt") -or ($_.Extension -eq ".csv") -or ($_.Extension -eq ".db") -or ($_.Extension -eq ".dbf") -or ($_.Extension -eq ".log") -or ($_.Extension -eq ".mdb") -or ($_.Extension -eq ".sav") -or ($_.Extension -eq ".sql") -or ($_.Extension -eq ".tar") -or ($_.Extension -eq ".xml") -or ($_.Extension -eq ".bak") -or ($_.Extension -eq ".pdf") -or ($_.Extension -eq ".tex") -or ($_.Extension -eq ".docx") -or ($_.Extension -eq ".doc") -or ($_.Extension -eq ".xls") -or ($_.Extension -eq ".xlsx")} #Will look for credential files.
+
   GCI -Recurse -Path $Drives -Filter "*NTUSER*" -File -ErrorAction SilentlyContinue | where {$_.Extension -eq ".dat"} #Will look for NTUSER.dat files but will only find them if running from admin prompt
 
   GCI -Recurse -Path $Drives -Filter "*" -File -ErrorAction SilentlyContinue | where {$_.Extension -eq ".kbdx"} #Will look for Keepass files.
@@ -94,6 +96,8 @@ function Invoke-Profit {
   $Hosts = ($FinalForm) -replace("\\", "\\Windows\\system32\\drivers\\etc\\")
 
   GCI -Recurse -Path $Drives -Filter "*password*" -ErrorAction SilentlyContinue | where {($_.Extension -eq ".txt") -or ($_.Extension -eq ".csv") -or ($_.Extension -eq ".db") -or ($_.Extension -eq ".dbf") -or ($_.Extension -eq ".log") -or ($_.Extension -eq ".mdb") -or ($_.Extension -eq ".sav") -or ($_.Extension -eq ".sql") -or ($_.Extension -eq ".tar") -or ($_.Extension -eq ".xml") -or ($_.Extension -eq ".bak") -or ($_.Extension -eq ".pdf") -or ($_.Extension -eq ".tex") -or ($_.Extension -eq ".docx") -or ($_.Extension -eq ".doc") -or ($_.Extension -eq ".xls") -or ($_.Extension -eq ".xlsx")} #Will look for password files.
+
+  GCI -Recurse -Path $Drives -Filter "*credential*" -ErrorAction SilentlyContinue | where {($_.Extension -eq ".txt") -or ($_.Extension -eq ".csv") -or ($_.Extension -eq ".db") -or ($_.Extension -eq ".dbf") -or ($_.Extension -eq ".log") -or ($_.Extension -eq ".mdb") -or ($_.Extension -eq ".sav") -or ($_.Extension -eq ".sql") -or ($_.Extension -eq ".tar") -or ($_.Extension -eq ".xml") -or ($_.Extension -eq ".bak") -or ($_.Extension -eq ".pdf") -or ($_.Extension -eq ".tex") -or ($_.Extension -eq ".docx") -or ($_.Extension -eq ".doc") -or ($_.Extension -eq ".xls") -or ($_.Extension -eq ".xlsx")} #Will look for credential files.
 
   GCI -Recurse -Path $Drives -Filter "*NTUSER*" -ErrorAction SilentlyContinue | where {$_.Extension -eq ".dat"} #Will look for NTUSER.dat files but will only find them if running from admin prompt
 
